@@ -19,7 +19,7 @@ import java.lang.String;
 import java.lang.StringBuffer;
 public class MainActivity extends AppCompatActivity {
 	
-	private Context ctx;
+	
 	private DrawingView dView;
     private MaterialButton modeSelect,colorPicker;
     
@@ -28,10 +28,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-		String str = "Amol chandra";
         
         init();
         initListener();
+         Log.i("MainActivity.java","initListener()");
+       
         
         
         
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         
         
         
+       
         getWindowManager().getDefaultDisplay().getMetrics(dMetrics);
         
         dView.init(dMetrics);
@@ -56,98 +58,123 @@ public class MainActivity extends AppCompatActivity {
     }
     
     public void initListener(){
-        modeSelect.setOnClickListener(new View.OnClickListener(){
+       modeSelect.setOnClickListener(new View.OnClickListener()
+        {
+            
             
             @Override
-            public void onClick(View v){
+            public void onClick(View view)
+            {
                 
-                MaterialAlertDialogBuilder mab=new MaterialAlertDialogBuilder(MainActivity.this);
-                mab.setItems(new String[]{"Normal","Emboss","Blur","Clear"},new DialogInterface.OnClickListener(){
+                MaterialAlertDialogBuilder mBuilder=new MaterialAlertDialogBuilder(MainActivity.this);
+                mBuilder.setItems(new String[] {"Normal","Emboss","Blur","Clear"},new DialogInterface.OnClickListener()
+                {
+                    
                    
                      @Override
-                     public void onClick(DialogInterface d,int p){
-                       switch(p){
+                     
+                     public void onClick(DialogInterface dialog,int which)
+                     {
+                         
+                         
+                         dialog.dismiss();
+                       switch(which){
                            default:
                             case 0:
                             dView.normal();
-                            d.dismiss();
+                            
                             break;
                             
                             case 1:
                             dView.emboss();
-                            d.dismiss();
+                           
                             break;
                             
                             case 2:
                             dView.blur();
-                            d.dismiss();
+                           
                             break;
                             
                             case 3:
                             dView.clear();
-                            d.dismiss();
+                           
                             break;
                             
                            }
-                         }
+                     }
                     
-                    });
-                    
-                    mab.create().show();
-           
+                });
+                mBuilder.create().show();
+                Log.i("MainActivity.java","mab");
+
+                
+           	Toast.makeText(MainActivity.this,"hello",Toast.LENGTH_SHORT).show();
                     
                     
                 
         
-                }
+           }
+                
+                
+                
             
-            });
-            
-            modeSelect.setOnClickListener(new View.OnClickListener(){
+        });
+          
+                                
+            colorPicker.setOnClickListener(new View.OnClickListener(){
                 @Override
-                public void onClick(View v){
+                public void onClick(View view)
+                {
                     
                    // Alpha slider will be invisible
-					ColorPickerDialog view = new ColorPickerDialog(this);
+					ColorPickerDialog dia = new ColorPickerDialog(MainActivity.this);
                      // Setters
-					view.setAlpha(255);
-					view.setRed(255);
-					view.setGreen(255);
-					view.setBlue(255);
-					view.withAlpha(true); // enables alpha slider
-					view.setCloseOnPicked(false); // Prevents closing of dialog when 'pick' is clicked
+					dia.setAlpha(255);
+				    dia.setRed(255);
+					dia.setGreen(255);
+					dia.setBlue(255);
+					dia.withAlpha(true); // enables alpha slider
+					dia.setCloseOnPicked(false); // Prevents closing of dialog when 'pick' is clicked
                     
-                    view.getAlpha();
-					view.getRed();
-					view.getGreen();
-					view.getBlue();
-					view.getColor(); // returns int value of current color
-					view.getHexColorCode(); // if withAlpha then with alpha hex value else without it
-					view.getHexWithAlpha();
+                    dia.getAlpha();
+					dia.getRed();
+					dia.getGreen();
+					dia.getBlue();
+					dia.getColor(); // returns int value of current color
+					dia.getHexColorCode(); // if withAlpha then with alpha hex value else without it
+					dia.getHexWithAlpha();
                     
-					view.getHexWithoutAlpha();
+					dia.getHexWithoutAlpha();
                     
-                    view.setColorPickerCallback(new ColorPickerDialog.ColorPickerCallback(){
+                    dia.setColorPickerCallback(new ColorPickerDialog.ColorPickerCallback(){
  				 @Override
 				  public void onColorPicked(int color, String hexColorCode)
                    {
     				
-                    dView.setColor(Color.parseColor(hexColorCode))
+                    dView.setColor(Color.parseColor(hexColorCode));
+                    dia.dismiss();
                     
                      }
 				});
-                    }
+                dia.show();
+                
+              }
+                    
+                    
                 
                 });
-        
-        
         dView.normal();
         
-        
+         
     }
     
     
 }
+
+
+
+
+
 
 
 
