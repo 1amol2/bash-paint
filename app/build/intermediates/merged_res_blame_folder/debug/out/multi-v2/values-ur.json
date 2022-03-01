@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/storage/emulated/0/AndroidIDEProjects/PaintBash/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml",
+            "outputFile": "/storage/emulated/0/GProjects/bash-paint/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ur/values-ur.xml",
             "map": [
                 {
                     "source": "/data/data/com.itsaky.androidide/files/framework/.gradle/caches/transforms-3/ef3a9e60a95e82d0b0fc8518a02fd908/transformed/material-1.5.0/res/values-ur/values-ur.xml",

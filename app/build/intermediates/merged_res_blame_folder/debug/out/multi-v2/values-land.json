@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/storage/emulated/0/AndroidIDEProjects/PaintBash/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/storage/emulated/0/GProjects/bash-paint/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
                     "source": "/data/data/com.itsaky.androidide/files/framework/.gradle/caches/transforms-3/2f1e035cdce168ac5fc1893ffbc335e5/transformed/appcompat-1.4.0/res/values-land/values-land.xml",
