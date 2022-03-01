@@ -1,6 +1,7 @@
 package com.amol.paintbash;
 
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.util.DisplayMetrics;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.*;
@@ -12,13 +13,16 @@ import com.amol.paintbash.MainActivity;
 import com.google.android.material.button.MaterialButton;
 import android.view.View;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.itsaky.colorpicker.ColorPickerDialog;
 import java.lang.Override;
 import java.lang.String;
+import java.lang.StringBuffer;
 public class MainActivity extends AppCompatActivity {
 	
 	private Context ctx;
 	private DrawingView dView;
     private MaterialButton modeSelect,colorPicker;
+    
     
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -26,6 +30,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 		String str = "Amol chandra";
         
+        init();
+        initListener();
+        
+        
+        
+    }
+    
+    public void init(){
         dView=findViewById(R.id.drawingView);
         modeSelect=findViewById(R.id.mModeSelect);
        
@@ -39,7 +51,11 @@ public class MainActivity extends AppCompatActivity {
         getWindowManager().getDefaultDisplay().getMetrics(dMetrics);
         
         dView.init(dMetrics);
+  
         
+    }
+    
+    public void initListener(){
         modeSelect.setOnClickListener(new View.OnClickListener(){
             
             @Override
@@ -82,18 +98,59 @@ public class MainActivity extends AppCompatActivity {
                     
                     
                 
+        
                 }
             
             });
-        
+            
+            modeSelect.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v){
+                    
+                   // Alpha slider will be invisible
+					ColorPickerDialog view = new ColorPickerDialog(this);
+                     // Setters
+					view.setAlpha(255);
+					view.setRed(255);
+					view.setGreen(255);
+					view.setBlue(255);
+					view.withAlpha(true); // enables alpha slider
+					view.setCloseOnPicked(false); // Prevents closing of dialog when 'pick' is clicked
+                    
+                    view.getAlpha();
+					view.getRed();
+					view.getGreen();
+					view.getBlue();
+					view.getColor(); // returns int value of current color
+					view.getHexColorCode(); // if withAlpha then with alpha hex value else without it
+					view.getHexWithAlpha();
+                    
+					view.getHexWithoutAlpha();
+                    
+                    view.setColorPickerCallback(new ColorPickerDialog.ColorPickerCallback(){
+ 				 @Override
+				  public void onColorPicked(int color, String hexColorCode)
+                   {
+    				
+                    dView.setColor(Color.parseColor(hexColorCode))
+                    
+                     }
+				});
+                    }
+                
+                });
         
         
         dView.normal();
         
         
-        
     }
+    
+    
 }
+
+
+
 
 
 
