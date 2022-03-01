@@ -1,12 +1,12 @@
-#Tue Mar 01 10:56:11 GMT 2022
+#Tue Mar 01 16:08:55 GMT 2022
 path.3=3/classes.dex
 path.2=12/classes.dex
 path.1=0/classes.dex
 path.0=classes.dex
-base.3=/storage/emulated/0/AndroidIDEProjects/PaintBash/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
-base.2=/storage/emulated/0/AndroidIDEProjects/PaintBash/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex
-base.1=/storage/emulated/0/AndroidIDEProjects/PaintBash/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.0=/storage/emulated/0/AndroidIDEProjects/PaintBash/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.3=/storage/emulated/0/GProjects/bash-paint/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
+base.2=/storage/emulated/0/GProjects/bash-paint/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex
+base.1=/storage/emulated/0/GProjects/bash-paint/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.0=/storage/emulated/0/GProjects/bash-paint/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex

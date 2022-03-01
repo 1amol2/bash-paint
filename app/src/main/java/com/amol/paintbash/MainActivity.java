@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-		String str = "";
+		String str = "Amol chandra";
         
         dView=findViewById(R.id.drawingView);
         modeSelect=findViewById(R.id.mModeSelect);
@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         
     }
 }
+
 
 
 
