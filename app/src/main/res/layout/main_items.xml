@@ -55,7 +55,7 @@
             android:text="Mode"
             app:backgroundTint="#E1BEE7"
             android:textColor="#6A1B9A"
-            android:textSize="20sp"
+            android:textSize="21sp"
             android:textStyle="bold"
             android:typeface="serif"/>
         
@@ -71,7 +71,7 @@
             android:textStyle="bold"
             android:typeface="serif"
             app:backgroundTint="#E1BEE7"
-            android:textSize="20sp"/>
+            android:textSize="21sp"/>
         </LinearLayout>
     
     </LinearLayout>
