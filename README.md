@@ -1,5 +1,5 @@
 # bash-paint
-This is an app in which you can paint or draw anything with the touch of yuur fingers
+This is an app in which you can paint or draw anything with the touch of your fingers
 
 
 
