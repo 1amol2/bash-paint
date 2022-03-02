@@ -13,6 +13,7 @@ import com.amol.paintbash.MainActivity;
 import com.google.android.material.button.MaterialButton;
 import android.view.View;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.slider.Slider;
 import com.itsaky.colorpicker.ColorPickerDialog;
 import java.lang.Override;
 import java.lang.String;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 	
 	private DrawingView dView;
     private MaterialButton modeSelect,colorPicker;
-    
+    private Slider brushWidth;
     
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         
         init();
         initListener();
-         Log.i("MainActivity.java","initListener()");
+         Log.v("MainActivity.java","initListener()");
        
         
         
@@ -40,7 +41,10 @@ public class MainActivity extends AppCompatActivity {
     
     public void init(){
         dView=findViewById(R.id.drawingView);
+        brushWidth=findViewById(R.id.brushWidth);
+        
         modeSelect=findViewById(R.id.mModeSelect);
+       
        
         colorPicker=findViewById(R.id.mColorPicker);
         
@@ -58,6 +62,15 @@ public class MainActivity extends AppCompatActivity {
     }
     
     public void initListener(){
+       brushWidth.addOnChangeListener(new Slider.OnChangeListener(){
+           @Override
+          
+           public void onValueChange(Slider p1,float p2,boolean p3){
+               
+               dView.setSize(p2);
+               }
+           
+       });
        modeSelect.setOnClickListener(new View.OnClickListener()
         {
             
@@ -108,8 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("MainActivity.java","mab");
 
                 
-           	Toast.makeText(MainActivity.this,"hello",Toast.LENGTH_SHORT).show();
-                    
+           	
                     
                 
         
@@ -170,6 +182,7 @@ public class MainActivity extends AppCompatActivity {
     
     
 }
+
 
 
 
