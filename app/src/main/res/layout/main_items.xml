@@ -13,7 +13,6 @@
     
     <LinearLayout
         android:background="@drawable/tools_holder_bg"
-        android:elevation="4dp"
         android:layout_alignParentBottom="true"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -37,7 +36,7 @@
             android:id="@+id/brushWidth"
            android:layout_height="match_parent"
        	 android:layout_width="match_parent"
-            android:valueFrom="5.0"
+            android:valueFrom="10.0"
             android:valueTo="100.0"
             />
             </LinearLayout>
@@ -56,7 +55,7 @@
             android:text="Mode"
             app:backgroundTint="#E1BEE7"
             android:textColor="#6A1B9A"
-            android:textSize="20sp"
+            android:textSize="21sp"
             android:textStyle="bold"
             android:typeface="serif"/>
         
@@ -72,10 +71,12 @@
             android:textStyle="bold"
             android:typeface="serif"
             app:backgroundTint="#E1BEE7"
-            android:textSize="20sp"/>
+            android:textSize="21sp"/>
         </LinearLayout>
     
     </LinearLayout>
     
 
 </RelativeLayout>
+
+
