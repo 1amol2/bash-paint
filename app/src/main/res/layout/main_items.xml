@@ -6,10 +6,12 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent">
     
-    <com.amol.paintbash.DrawingView
+    
+      <com.amol.paintbash.DrawingView
         android:id="@+id/drawingView"
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>
+    
     
     <LinearLayout
         android:background="@drawable/tools_holder_bg"
@@ -17,66 +19,72 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical">
-         <LinearLayout
-            android:layout_height="wrap_content"
-       	 android:layout_width="match_parent"
-      	  android:orientation="horizontal"
-            >
-            <TextView
-              android:layout_height="wrap_content"
-       	   android:layout_width="wrap_content"
-              android:text="Width"
-              android:typeface="serif"
-              android:textColor="#FFFFFF"
-              android:textSize="24sp"
-              android:padding="8dp"
-      	 
-                />
-        <com.google.android.material.slider.Slider
-            android:id="@+id/brushWidth"
-           android:layout_height="match_parent"
-       	 android:layout_width="match_parent"
-            android:valueFrom="10.0"
-            android:valueTo="100.0"
-            />
-            </LinearLayout>
+        
         <LinearLayout
             android:layout_height="wrap_content"
-       	 android:layout_width="match_parent"
-      	  android:orientation="horizontal"
-            >
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.Material3.Button.TonalButton"
-            android:id="@+id/mModeSelect"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1.0"
-            android:layout_width="wrap_content"
-            android:text="Mode"
-            app:backgroundTint="#E1BEE7"
-            android:textColor="#6A1B9A"
-            android:textSize="21sp"
-            android:textStyle="bold"
-            android:typeface="serif"/>
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="8dp"
+                android:text="Width"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:typeface="serif"/>
+            
+            <com.google.android.material.slider.Slider
+                android:id="@+id/brushWidth"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:valueFrom="10.0"
+                app:trackColorActive="#394228"
+                app:trackColorInactive="#FFFFFF"
+                android:valueTo="100.0"/>
+            
         
-        <com.google.android.material.button.MaterialButton
-            style="@style/Widget.Material3.Button.TonalButton"
-            android:id="@+id/mColorPicker"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_weight="1.0"
-            android:layout_width="wrap_content"
-            android:text="Color"
-            android:textColor="#6A1B9A"
-            android:textStyle="bold"
-            android:typeface="serif"
-            app:backgroundTint="#E1BEE7"
-            android:textSize="21sp"/>
         </LinearLayout>
+        
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:id="@+id/mModeSelect"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1.0"
+                android:layout_width="wrap_content"
+                android:text="Mode"
+                app:backgroundTint="#394228"
+                android:textColor="#FFFFFF"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:typeface="serif"/>
+            
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:id="@+id/mColorPicker"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1.0"
+                android:layout_width="wrap_content"
+                android:text="Color"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:typeface="serif"
+                app:backgroundTint="#394228"
+                android:textSize="21sp"/>
+            
+        
+        </LinearLayout>
+        
     
     </LinearLayout>
+        
     
 
 </RelativeLayout>
-
-
