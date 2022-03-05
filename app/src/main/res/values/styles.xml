@@ -9,9 +9,11 @@
 	    <item name="colorControlNormal">@color/colorControlNormal</item>
         <item name="android:windowFullscreen">true</item>
 		<item name="android:windowContentOverlay">@null</item>
+        	<item name="android:navigationBarColor">#6B705C</item>
 
     </style>
     
 </resources>
+
 
 
