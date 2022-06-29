@@ -7,7 +7,7 @@ android {
     buildToolsVersion "33.0.0"
 
     defaultConfig {
-        applicationId "com.amol.nav"
+        applicationId "com.amol.paintbash"
         minSdk 24
         targetSdk 31
         versionCode 1
