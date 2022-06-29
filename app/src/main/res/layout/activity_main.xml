@@ -1,23 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context=".MainActivity"
-    
-    >
-    
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
     <LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-		>
-        <include layout="@layout/main_items"/>
-        </LinearLayout>>
-	</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        android:orientation="vertical" >
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
 
+            <com.amol.paintbash.DrawingView
+                android:id="@+id/drawingView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/tools_holder_bg"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="Width"
+                        android:textColor="#FFFFFF"
+                        android:textSize="24sp"
+                        android:typeface="serif" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/brushWidth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:valueFrom="10.0"
+                        android:valueTo="100.0"
+                        app:trackColorActive="#394228"
+                        app:trackColorInactive="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/mModeSelect"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1.0"
+                        android:text="Mode"
+                        android:textColor="#FFFFFF"
+                        android:textSize="21sp"
+                        android:textStyle="bold"
+                        android:typeface="serif"
+                        app:backgroundTint="#394228" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/mColorPicker"
+                        style="@style/Widget.Material3.Button.TonalButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_weight="1.0"
+                        android:text="Color"
+                        android:textColor="#FFFFFF"
+                        android:textSize="21sp"
+                        android:textStyle="bold"
+                        android:typeface="serif"
+                        app:backgroundTint="#394228" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
